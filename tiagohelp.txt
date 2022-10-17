@@ -1,0 +1,14 @@
+CONDA
+conda env create --file environment.yaml
+conda activate ldm
+
+
+
+conda install ipython3
+conda install -c conda-forge huggingface_hub
+
+ipython3 dreambooth_runpod_joepenna.py 
+
+
+
+

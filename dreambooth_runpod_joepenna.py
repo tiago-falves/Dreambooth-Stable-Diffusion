@@ -60,7 +60,7 @@ notebook_login()
 # In[3]:
 
 
-# Download the 1.4 sd model
+# # Download the 1.4 sd model
 from IPython.display import clear_output
 
 from huggingface_hub import hf_hub_download
@@ -70,12 +70,12 @@ downloaded_model_path = hf_hub_download(
  use_auth_token=True
 )
 
-# TODO
+
 # Move the sd-v1-4.ckpt to the root of this directory as "model.ckpt"
-# actual_locations_of_model_blob = get_ipython().getoutput('readlink -f {downloaded_model_path}')
-# get_ipython().system('mv {actual_locations_of_model_blob[-1]} model.ckpt')
-# clear_output()
-# print("✅ model.ckpt successfully downloaded")
+actual_locations_of_model_blob = get_ipython().getoutput('readlink -f {downloaded_model_path}')
+get_ipython().system('mv {actual_locations_of_model_blob[-1]} model.ckpt')
+clear_output()
+print("✅ model.ckpt successfully downloaded")
 
 
 
