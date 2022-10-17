@@ -12,13 +12,12 @@
 # load modules
 module load cuda11.2/toolkit/11.2.2
 
-conda env create --file environment.yaml
 conda activate ldm
 
-conda install ipython3
+conda install ipython
 conda install -c conda-forge huggingface_hub
 
-ipython3 dreambooth_runpod_joepenna.py 
+ipython dreambooth_runpod_joepenna.py 
 
 # cd ~/projects/diffusion/stable-diffusion/ || return
 # run your code (pip install modules on login node; datasets read directly from /net/sharedfolders/datasets)

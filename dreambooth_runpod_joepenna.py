@@ -52,9 +52,12 @@ get_ipython().system('pip install ipywidgets==7.7.1')
 
 
 # Hugging Face Login
-from huggingface_hub import notebook_login
+#from huggingface_hub import notebook_login
 
-notebook_login()
+#notebook_login()
+
+from huggingface_hub.hf_api import HfFolder
+HfFolder.save_token('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')
 
 
 # In[3]:
