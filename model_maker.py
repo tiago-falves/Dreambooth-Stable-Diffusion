@@ -301,7 +301,7 @@ def download_image(url):
  return Image.open(BytesIO(response.content)).convert("RGB")
 
 images = list(filter(None,[download_image(url) for url in urls]))
-save_path = "./training_images"
+save_path = "./Dreambooth-Stable-Diffusion/training_images"
 if not os.path.exists(save_path):
  os.mkdir(save_path)
 [image.save(f"{save_path}/{i}.png", format="png") for i, image in enumerate(images)]
