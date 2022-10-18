@@ -383,7 +383,7 @@ get_ipython().system('rm -rf training_images/.ipynb_checkpoints')
 
 # Opening a file
 file1 = open('args.txt', 'w')
-L = ["{reg_data_root}\n", "{project_name}\n", "This is London \n"]
+L = [reg_data_root +"\n", project_name]
 s = "Hello\n"
   
 # Writing multiple strings
