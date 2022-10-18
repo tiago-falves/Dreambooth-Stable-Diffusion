@@ -2,7 +2,7 @@
 #SBATCH --job-name=pipeline_newgen
 #SBATCH --output=my-output.log
 #SBATCH --mem=64G
-#SBATCH --time=7-24:00:00
+#SBATCH --time=1-10:00:00
 #SBATCH --cpus-per-task=4
 #SBATCH --gpus=1
 #SBATCH --mail-user=tiago.falves98@gmail.com
@@ -14,10 +14,11 @@ module load cuda11.2/toolkit/11.2.2
 
 conda activate ldm
 
-conda install ipython
+
 conda install -c conda-forge huggingface_hub
 
-ipython dreambooth_runpod_joepenna.py 
+python "main.py"   --base configs/stable-diffusion/v1-finetune_unfrozen.yaml   -t   --actual_resume "model.ckpt"   --reg_data_root "/workspace/Dreambooth-Stable-Diffusion/regularization_images/cell"   -n "HSIL"   --gpus 0,   --data_root "/workspace/Dreambooth-Stable-Diffusion/training_images"   --max_training_steps 1000   --class_word "cell"   --token "firstNameLastName"   --no-test
+ 
 
 # cd ~/projects/diffusion/stable-diffusion/ || return
 # run your code (pip install modules on login node; datasets read directly from /net/sharedfolders/datasets)
