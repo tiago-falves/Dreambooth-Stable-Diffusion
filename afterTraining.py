@@ -10,7 +10,7 @@ project_name = "HSIL"
 
 # MAX STEPS
 # How many steps do you want to train for?
-max_training_steps = 5
+max_training_steps = 10000
 
 # Match class_word to the category of the regularization images you chose above.
 class_word = "cell" # typical uses are "man", "person", "woman"
@@ -19,11 +19,11 @@ class_word = "cell" # typical uses are "man", "person", "woman"
 token = "firstNameLastName"
 
 
-reg_data_root = "/workspace/Dreambooth-Stable-Diffusion/regularization_images/" + "cell"
+reg_data_root = "./regularization_images/" + "cell"
 
 # Copy the checkpoint into our `trained_models` folder
 
-directory_paths = get_ipython().getoutput('ls -d Dreambooth-Stable-Diffusion/logs/*')
+directory_paths = get_ipython().getoutput('ls -d ./logs/*')
 last_checkpoint_file = directory_paths[-1] + "/checkpoints/last.ckpt"
 training_images = get_ipython().getoutput('find training_images/*')
 date_string = get_ipython().getoutput('date +"%Y-%m-%dT%H-%M-%S"')
