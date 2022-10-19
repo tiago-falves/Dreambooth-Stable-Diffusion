@@ -18,6 +18,7 @@ conda activate ldm
 conda install -c conda-forge huggingface_hub
 
 python "main.py"   --base configs/stable-diffusion/v1-finetune_unfrozen.yaml   -t   --actual_resume "model.ckpt"   --reg_data_root "./regularization_images/cell"   -n "HSIL"   --gpus 0,   --data_root "./training_images"   --max_training_steps 3000   --class_word "cell"   --token "firstNameLastName"   --no-test
+
  
 
 # cd ~/projects/diffusion/stable-diffusion/ || return
