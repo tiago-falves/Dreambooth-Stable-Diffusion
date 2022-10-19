@@ -339,7 +339,7 @@ def download_image(url):
  return Image.open(BytesIO(response.content)).convert("RGB")
 
 images = list(filter(None,[download_image(url) for url in urls]))
-save_path = "./training_images"
+save_path = "./training_images/carcinoma"
 if not os.path.exists(save_path):
  os.mkdir(save_path)
 [image.save(f"{save_path}/{i}.png", format="png") for i, image in enumerate(images)]
@@ -379,7 +379,7 @@ token = "firstNameLastName"
 
 reg_data_root = "./regularization_images/" + "cell"
 
-get_ipython().system('rm -rf training_images/.ipynb_checkpoints')
+get_ipython().system('rm -rf training_images/carcinoma/.ipynb_checkpoints')
 
 # Opening a file
 file1 = open('args.txt', 'w')

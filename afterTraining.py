@@ -25,7 +25,7 @@ reg_data_root = "./regularization_images/" + "cell"
 
 directory_paths = get_ipython().getoutput('ls -d ./logs/*')
 last_checkpoint_file = directory_paths[-1] + "/checkpoints/last.ckpt"
-training_images = get_ipython().getoutput('find training_images/*')
+training_images = get_ipython().getoutput('find training_images/carcinoma/*')
 date_string = get_ipython().getoutput('date +"%Y-%m-%dT%H-%M-%S"')
 file_name = date_string[-1] + "_" + project_name + "_" + str(len(training_images)) + "_training_images_" +  str(max_training_steps) + "_max_training_steps_" + token + "_token_" + class_word + "_class_word.ckpt"
 
