@@ -5,7 +5,7 @@
 #SBATCH --time=1-10:00:00
 #SBATCH --cpus-per-task=4
 #SBATCH --gpus=1
-#SBATCH --mail-user=tiago.falves98@gmail.com
+#SBATCH --mail-user=tiago.alves@aicos.fraunhofer.pt
 #SBATCH --mail-type=ALL
 
 # mkdir -p /hpc/scratch/$user
