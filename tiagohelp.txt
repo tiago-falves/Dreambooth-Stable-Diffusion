@@ -15,3 +15,7 @@ sbatch -p gpu scriptHPC.sh
 python "main.py"   --base configs/stable-diffusion/v1-finetune_unfrozen.yaml   -t   --actual_resume "model.ckpt"   --reg_data_root "/workspace/Dreambooth-Stable-Diffusion/regularization_images/cell"   -n "HSIL"   --gpus 0,   --data_root "/workspace/Dreambooth-Stable-Diffusion/training_images"   --max_training_steps 1000   --class_word "cell"   --token "firstNameLastName"   --no-test
 
 cat output.log
+
+
+copy from ssh to computer
+scp -r tiago.alves@hpc:/hpc/home/tiago.alves/Dreambooth2/Dreambooth-Stable-Diffusion/outputs/txt2img-samples  ~/Documents/SdImages/carcinoma
