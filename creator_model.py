@@ -377,7 +377,7 @@ class_word = "cell" # typical uses are "man", "person", "woman"
 token = "firstNameLastName"
 
 
-reg_data_root = "/workspace/Dreambooth-Stable-Diffusion/regularization_images/" + "cell"
+reg_data_root = "./regularization_images/" + "cell"
 
 get_ipython().system('rm -rf training_images/.ipynb_checkpoints')
 
